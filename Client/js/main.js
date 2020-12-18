@@ -26,7 +26,10 @@ function operationsListeners() {
         const address = $("#inputAddress").val();
         const helpType = $("#helpType").val();
         const location = $("#location").val();
-        console.log(id, fn, ln, email, address, helpType,location);
+
+        let arr = [];
+        $('input[type=checkbox]').each(function () {
     
+        });
     });
 }

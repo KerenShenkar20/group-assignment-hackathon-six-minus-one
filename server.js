@@ -20,6 +20,13 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/Client/index.html'));
 });
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
+
+
 
 // app.use(express.static(path.join(__dirname + '/client/')));
 
@@ -38,10 +45,8 @@ app.get('/', function (req, res) {
 app.use('/api/users', userRouter);
 app.use('/api/match', matchRouter);
 
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
     console.error(err.stack);
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     res.status(500).send('Something is broken!');
 });
 

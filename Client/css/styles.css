@@ -104,11 +104,12 @@ header h1 {
     line-height: 40px;
     text-align: center;
     cursor: pointer;
+    transition: all .4s ease-in-out;
   }
   
   .weekDays-selector input[type=checkbox]:checked + label {
-    background: #2AD705;
-    color: #ffffff;
+    background: rgb(255, 223, 223);
+    color: #000;
   }
   
 

@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 function getAllgetAllMatchesUsers() {
     $.ajax({
-        url: '',
+        url: `http://localhost:3000/api/match`,
         type: 'GET',
         success: function (match) {
             recreateTable(match);
@@ -13,8 +13,15 @@ function getAllgetAllMatchesUsers() {
     });
 }
 
-function recreateTable(match) {
-
+function registerHelper(user) {
+    $.ajax({
+        url: `http://localhost:3000/api/users`,
+        type: 'POST',
+        data: user,
+        success: function (match) {
+            recreateTable(match);
+        }
+    });
 }
 
 function operationsListeners() {

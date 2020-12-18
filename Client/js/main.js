@@ -42,7 +42,7 @@ function operationsListeners() {
             id,
             email,
             address,
-            time: '',
+            time: arr,
             last_name: ln,
             first_name: fn,
             city: location,

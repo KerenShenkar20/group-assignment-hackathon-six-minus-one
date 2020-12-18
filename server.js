@@ -1,5 +1,7 @@
 const express = require("express");
 const { userRouter } = require("./Routers/user.router");
+const { matchRouter } = require("./Routers/match.router");
+
 //const cors = require('cors');
 const path = require('path');
 
@@ -25,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use('/api/users', userRouter);
+app.use('/api/match', matchRouter);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);

@@ -1,1 +1,1 @@
-// Change the name of the file if needed
+const User = require('../models/user.model');

@@ -20,7 +20,59 @@
 
     <main>
         <form>
+            <div class="form-group row">
+                <label for="inputId" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="inputId" id="inputId" placeholder="User id">
+                </div>
+            </div>
 
+            <div class="form-group row">
+                <label for="inputFN" class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="inputFN" id="inputFN" placeholder="First Name">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputLN" class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="inputLN" id="inputLN" placeholder="Last Name">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" name="inputEmail" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+
+            <select class="custom-select">
+                <option selected>City</option>
+                <option value="Tel-Aviv">Tel-Aviv</option>
+                <option value="Ramat-Gan">Ramat-Gan</option>
+                <option value="Haifa">Haifa</option>
+              </select>
+
+              <div class="form-group row">
+                <label for="inputAddress" class="col-sm-2 col-form-label">Address</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="inputAddress" id="inputAddress" placeholder="Address">
+                </div>
+            </div>
+
+            <select class="custom-select">
+                <option selected>Help Type</option>
+                <option value="Medical">Medical</option>
+                <option value="Friendship">Friendship</option>
+              </select>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="button" id="regVol" class="btn btn-primary">Register</button>
+                </div>
+            </div>
    
         </form>
     </main>

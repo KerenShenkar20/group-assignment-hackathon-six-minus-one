@@ -18,7 +18,7 @@
 
     <a href="./index.html" class="btn  back-btn"> Back</a>
 
-  
+
     <form class='container'>
         <div class="form-group row">
             <div class="col-sm-5">
@@ -50,8 +50,8 @@
             </div>
         </div>
 
-        <div id="location" class="selects">
-            <select class="custom-select col-sm-2">
+        <div class="selects">
+            <select id="location" class="custom-select col-sm-2">
                 <option selected>City</option>
                 <option value="Tel-Aviv">Tel-Aviv</option>
                 <option value="Ramat-Gan">Ramat-Gan</option>
@@ -63,8 +63,25 @@
                 <option value=" Medical">Medical</option>
                 <option value="Friendship">Friendship</option>
             </select>
-
         </div>
+
+        <div class="weekDays-selector">
+            <input type="checkbox" id="weekday-sun" class="weekday" />
+            <label for="weekday-sun">Sunday</label>
+            <input type="checkbox" id="weekday-mon" class="weekday" />
+            <label for="weekday-mon">Monday</label>
+            <input type="checkbox" id="weekday-tue" class="weekday" />
+            <label for="weekday-tue">Tuesday</label>
+            <input type="checkbox" id="weekday-wed" class="weekday" />
+            <label for="weekday-wed">Wednesday</label>
+            <input type="checkbox" id="weekday-thu" class="weekday" />
+            <label for="weekday-thu">Thursday</label>
+            <input type="checkbox" id="weekday-fri" class="weekday" />
+            <label for="weekday-fri">Friday</label>
+            <input type="checkbox" id="weekday-sat" class="weekday" />
+            <label for="weekday-sat">Saturday</label>
+          </div>
+ 
 
         <div class="form-group row">
             <div class="col-sm-10">
@@ -73,7 +90,7 @@
         </div>
 
     </form>
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script src="js/main.js"></script>

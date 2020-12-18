@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 function getAllgetAllMatchesUsers() {
     $.ajax({
-        url: `http://localhost:3000/api/match`,
+        url: `https://fathomless-hollows-14523.herokuapp.com/api/match`,
         type: 'GET',
         success: function (match) {
             recreateTable(match);
@@ -15,11 +15,11 @@ function getAllgetAllMatchesUsers() {
 
 function registerHelper(user) {
     $.ajax({
-        url: `http://localhost:3000/api/users`,
+        url: `https://fathomless-hollows-14523.herokuapp.com/api/users`,
         type: 'POST',
         data: user,
-        success: function (match) {
-            recreateTable(match);
+        success: function (user) {
+          console.log("success new user added");
         }
     });
 }

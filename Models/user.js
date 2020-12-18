@@ -19,9 +19,9 @@ const userSchema = new Schema({
 //userSchema.
 //    path('id')
 //    .validate(id=> id>0, "it must be nore then 0");
-userSchema.
-path('first_name')
-.set(first_name => String(first_name).toUpperCase());
+// userSchema.
+// path('first_name')
+// .set(first_name => String(first_name).toUpperCase());
 const User = model('User', userSchema);
 
 module.exports = User;

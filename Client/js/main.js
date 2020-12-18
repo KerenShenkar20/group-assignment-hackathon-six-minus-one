@@ -23,5 +23,10 @@ function operationsListeners() {
         const fn = $("#inputFN").val();
         const ln = $("#inputLN").val();
         const email = $("#inputEmail").val();
+        const address = $("#inputAddress").val();
+        const helpType = $("#helpType").val();
+        const location = $("#location").val();
+        console.log(id, fn, ln, email, address, helpType,location);
+    
     });
 }

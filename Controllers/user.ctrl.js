@@ -2,9 +2,25 @@ const User = require('../Models/user');
 
 exports.userDbController = {
     getUsers(req,res){
-        User.find({})
-        .then(docs => { res.json(docs)})
-        .catch(err => console.log(`Error getting the data from db: ${err}`));
+        
+        const keys = Object.keys(req.query);
+        if(keys.length == 3){
+            const city = keys[0];
+            const day = keys[1];
+            const help = keys[2];
+            User.find({city:req.query.city, day:req.query.day, help:req.query.help})
+            .then(docs => { res.json(docs)})
+            .catch(err => console.log(`Error getting the data from db: ${err}`));
+        }
+        else if(keys.length > 0 && keys.length < 3){
+            res.status(404).send("Error: wrong key");
+        }
+        else{
+            User.find({})
+            .then(docs => { res.json(docs)})
+            .catch(err => console.log(`Error getting the data from db: ${err}`));
+        }
+        
     },
     addUser(req,res){
         const newUser = new User({
@@ -25,14 +41,5 @@ exports.userDbController = {
         } else{
             res.status(404).send("Error saving a user");
         }
-    },
-     getUser(req,res) {
-         //const id = req.params.id;
-         const city = req.query.city;
-         const day = req.query.day;
-         const help = req.query.help_type;
-         User.findOne({city:city}, {day:day}, {help:help})
-         .then(docs => { res.json(docs)})
-         .catch(err => console.log(`Error getting the data from db: ${err}`));
     }
 }

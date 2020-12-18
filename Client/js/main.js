@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //getAllMatches();
+    //getAllgetAllMatchesUsers();
     operationsListeners();
 });
 
@@ -49,7 +49,6 @@ function operationsListeners() {
             isVolunteer: true,
             help_types: helpType,
         }
-
-
+        registerHelper(userInfo);
     });
 }

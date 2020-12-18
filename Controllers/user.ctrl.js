@@ -7,7 +7,7 @@ exports.userDbController = {
         .catch(err => console.log(`Error getting the data from db: ${err}`));
     },
     addUser(req,res){
-        const newUser = new user({
+        const newUser = new User({
             //check, validations
             "id": req.body.id,
             "first_name": req.body.first_name,
@@ -16,8 +16,8 @@ exports.userDbController = {
             "city": req.body.city,
             "address": req.body.address,
             "help_type": req.body.help_type,
-            "time": req.body.time,
-            "isVolunteer": req.body.isVolunteer
+            "day": req.body.day,
+            "userType": req.body.userType
         });
         const result = newUser.save();
         if (result){
@@ -27,10 +27,10 @@ exports.userDbController = {
         }
     },
      getUser(req,res) {
-         const id = req.params.id;
-         const city = req.body.city;
-         const day = req.body.day;
-         const help = req.bosy.help;
+         //const id = req.params.id;
+         const city = req.query.city;
+         const day = req.query.day;
+         const help = req.query.help_type;
          User.findOne({city:city}, {day:day}, {help:help})
          .then(docs => { res.json(docs)})
          .catch(err => console.log(`Error getting the data from db: ${err}`));

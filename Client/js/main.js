@@ -33,10 +33,23 @@ function operationsListeners() {
         const address = $("#inputAddress").val();
         const helpType = $("#helpType").val();
         const location = $("#location").val();
-
         let arr = [];
         $('input[type=checkbox]').each(function () {
-    
+            this.checked ? arr.push($(this).val()) : '';
         });
+
+        const userInfo = {
+            id,
+            email,
+            address,
+            time: '',
+            last_name: ln,
+            first_name: fn,
+            city: location,
+            isVolunteer: true,
+            help_types: helpType,
+        }
+
+
     });
 }

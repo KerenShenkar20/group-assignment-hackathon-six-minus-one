@@ -31,7 +31,7 @@ exports.userDbController = {
          const city = req.body.city;
          const day = req.body.day;
          const help = req.bosy.help;
-         User.findOne({city=city, day=day, help=help})
+         User.findOne({city:city}, {day:day}, {help:help})
          .then(docs => { res.json(docs)})
          .catch(err => console.log(`Error getting the data from db: ${err}`));
     }

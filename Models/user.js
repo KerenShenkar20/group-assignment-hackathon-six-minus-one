@@ -13,6 +13,7 @@ const userSchema = new Schema({
     userType: {type: String}
 }, {collection: 'users'});
 
+//Testtttt
 
 //Need validation
 //userSchema.

@@ -1,16 +1,29 @@
 const express = require("express");
+const logger = require("morgan"); // remove for heroku
+// require router here
+const cors = require('cors');
+const path = require('path');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-
-app.use((req, res, next) => {
+app.use(logger("dev")); // remove for heroku
+app.use(express.urlencoded({ extended: true }));
+//app.use(express.static(path.join(__dirname + '/client/')));
+app.use((req,res,next)=>{
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.set('Content-Type', 'application/json');
     next();
+ });
+ 
+
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/client/index.html'));
 });
+
+//api.use routers here 
 
 app.use((err, req, res, next) => {
     console.error(err.stack);

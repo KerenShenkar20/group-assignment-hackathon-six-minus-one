@@ -10,7 +10,6 @@ body{
     width: 100vw;
     min-height: 100vh;
     background: #f2709c;
-    background: -webkit-linear-gradient(to top, #f2709c, #ff9472); 
     background: linear-gradient(to top, #f2709c, #ff9472);
     overflow: hidden;
 }
@@ -80,6 +79,3 @@ header h1 {
     left: 15px;
 }
 
-.continer input{
-    
-}

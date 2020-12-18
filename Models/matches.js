@@ -7,4 +7,6 @@ const matchSchema = new Schema({
     idVolunteer: {type: Number},
 }, {collection: 'match'});
 
-module.exports = User
+const Match = model('Match', matchSchema);
+
+module.exports = Match;

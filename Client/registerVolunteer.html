@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Register Volunteer</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+        <h1>Register Volunteer</h1>
+    </header>
+
+    <a href="./index.html" class="btn  back-btn"> Back</a>
+
+
+    <form class='container'>
+        <div class="form-group row">
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="id" id="inputId" placeholder="User id">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="fn" id="inputFN" placeholder="First Name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="ln" id="inputLN" placeholder="Last Name">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-5">
+                <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="address" id="inputAddress" placeholder="Address">
+            </div>
+        </div>
+
+        <div class="selects">
+            <select id="location" class="custom-select col-sm-2">
+                <option selected>City</option>
+                <option value="Tel-Aviv">Tel-Aviv</option>
+                <option value="Ramat-Gan">Ramat-Gan</option>
+                <option value="Haifa">Haifa</option>
+            </select>
+
+            <select id="helpType" class="custom-select col-sm-2">
+                <option selected>Help Type</option>
+                <option value=" Medical">Medical</option>
+                <option value="Friendship">Friendship</option>
+            </select>
+        </div>
+
+        <div class="weekDays-selector">
+            <input type="checkbox" value="Sunday" id="weekday-sun" class="weekday" />
+            <label for="weekday-sun">Sunday</label>
+
+            <input type="checkbox" value="Monday" id="weekday-mon" class="weekday" />
+            <label for="weekday-mon">Monday</label>
+
+            <input type="checkbox" value="Tuesday" id="weekday-tue" class="weekday" />
+            <label for="weekday-tue">Tuesday</label>
+
+            <input type="checkbox" value="Wednesday" id="weekday-wed" class="weekday" />
+            <label for="weekday-wed">Wednesday</label>
+
+            <input type="checkbox" value="Thursday" id="weekday-thu" class="weekday" />
+            <label for="weekday-thu">Thursday</label>
+
+            <input type="checkbox" value="Friday" id="weekday-fri" class="weekday" />
+            <label for="weekday-fri">Friday</label>
+            
+            <input type="checkbox" value="Saturday" id="weekday-sat" class="weekday" />
+            <label for="weekday-sat">Saturday</label>
+          </div>
+ 
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="button" id="regVol" class="btn btn-primary">Register</button>
+            </div>
+        </div>
+
+    </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
